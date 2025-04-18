@@ -1,12 +1,12 @@
-import type React from "react"
-import { Shield, Award, Cog } from "lucide-react"
+import type React from "react";
+import { Shield, Award, Cog } from "lucide-react";
 
 export function ValuePropositionSection() {
   return (
     <section className="relative py-24">
       <div className="absolute inset-0 z-0">
         <img
-          src="/placeholder.svg?height=800&width=1920"
+          src="/Marcel_bottom.png?height=800&width=1920"
           alt="Marcel robot in action"
           className="w-full h-full object-cover"
         />
@@ -16,7 +16,8 @@ export function ValuePropositionSection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Marcel is affordable, built to last, and to work hard. Not to show off.
+            Marcel is affordable, built to last, and to work hard. Not to show
+            off.
           </h2>
         </div>
 
@@ -41,13 +42,13 @@ export function ValuePropositionSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 interface AdvantageCardProps {
-  icon: React.ReactNode
-  title: string
-  description: string
+  icon: React.ReactNode;
+  title: string;
+  description: string;
 }
 
 function AdvantageCard({ icon, title, description }: AdvantageCardProps) {
@@ -57,5 +58,5 @@ function AdvantageCard({ icon, title, description }: AdvantageCardProps) {
       <h3 className="text-xl font-bold text-center mb-4">{title}</h3>
       <p className="text-white/80 text-center">{description}</p>
     </div>
-  )
+  );
 }

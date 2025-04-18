@@ -1,4 +1,4 @@
-import { ArrowRight, Check } from "lucide-react"
+import { ArrowRight, Check } from "lucide-react";
 
 export function SolutionSection() {
   return (
@@ -11,21 +11,32 @@ export function SolutionSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square lg:aspect-auto lg:h-[600px] bg-gray-100 rounded-lg overflow-hidden">
             <img
-              src="/placeholder.svg?height=600&width=600"
+              src="/Marcel_global.png?height=600&width=600"
               alt="Marcel humanoid robot"
               className="w-full h-full object-cover"
             />
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-8">Why Humanoids Are Inevitable:</h3>
+            <h3 className="text-2xl font-bold mb-8">
+              Why Humanoids Are Inevitable:
+            </h3>
 
             <div className="space-y-8">
-              <BenefitItem title="Scalable" description="Physical AI models learn and adapt using human data" />
+              <BenefitItem
+                title="Scalable"
+                description="Physical AI models learn and adapt using human data"
+              />
 
-              <BenefitItem title="Relatable" description="Humans prefer humanoid robots for their familiar design" />
+              <BenefitItem
+                title="Relatable"
+                description="Humans prefer humanoid robots for their familiar design"
+              />
 
-              <BenefitItem title="Compatible" description="Perfect fit for human-centric environments" />
+              <BenefitItem
+                title="Compatible"
+                description="Perfect fit for human-centric environments"
+              />
             </div>
 
             <div className="mt-12">
@@ -41,12 +52,12 @@ export function SolutionSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 interface BenefitItemProps {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
 function BenefitItem({ title, description }: BenefitItemProps) {
@@ -62,5 +73,5 @@ function BenefitItem({ title, description }: BenefitItemProps) {
         <p className="text-gray-600">{description}</p>
       </div>
     </div>
-  )
+  );
 }

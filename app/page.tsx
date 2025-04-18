@@ -12,20 +12,20 @@ import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
-  return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <ProblemStatementSection />
-      <SolutionSection />
-      <TechnologySection />
-      <AICapabilitiesSection />
-      <ValuePropositionSection />
-      <TeamSection />
-      <MarketOpportunitySection />
-      <TimelineSection />
-      <ROISection />
-      <CTASection />
-      <Footer />
-    </main>
-  )
+    return (
+        <main className="min-h-screen">
+            <HeroSection />
+            <ProblemStatementSection />
+            <SolutionSection />
+            <TechnologySection />
+            <AICapabilitiesSection />
+            <ValuePropositionSection />
+            {/* <TeamSection /> */}
+            <MarketOpportunitySection />
+            <TimelineSection />
+            {/* <ROISection /> */}
+            {/* <CTASection /> */}
+            <Footer />
+        </main>
+    )
 }
