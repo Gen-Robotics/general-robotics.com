@@ -21,8 +21,8 @@ export default function Home() {
             <AICapabilitiesSection />
             <ValuePropositionSection />
             {/* <TeamSection /> */}
-            <MarketOpportunitySection />
-            <TimelineSection />
+            {/* <MarketOpportunitySection /> */}
+            {/* <TimelineSection /> */}
             {/* <ROISection /> */}
             {/* <CTASection /> */}
             <Footer />
