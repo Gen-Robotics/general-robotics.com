@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useScrollPosition } from "../hooks/use-scroll-position";
 import { useRef, useEffect, useState } from "react";
 
-const HUMA_SCALE = 0.6;
+const HUMA_SCALE = 0.4;
 const DOG_SCALE_ISO = 0.6;
 
 // Define multiple configurations
@@ -16,17 +16,17 @@ const CONFIGURATIONS = [
   {
     id: "Huma_front",
     IMAGE_SCALE: HUMA_SCALE,
-    IMAGE_START_POSITION: { x: 0, y: 100, orientation: 0 },
-    IMAGE_END_POSITION: { x: 0, y: 370, orientation: 0 },
+    IMAGE_START_POSITION: { x: 0, y: 130, orientation: 0 },
+    IMAGE_END_POSITION: { x: 0, y: 600, orientation: 0 },
     ANIMATION_START: 30,
-    ANIMATION_END: 250,
+    ANIMATION_END: 300,
     IMAGES: [
       {
         id: "main",
-        src: "robot_parts/torso.png",
-        alt: "Marcel torso",
-        width: 260,
-        height: 679,
+        src: "robot_parts/huma_torso.png",
+        alt: "Humanoid torso",
+        width: 430,
+        height: 1106,
         startPosition: {
           x: 0,
           y: 40,
@@ -36,18 +36,18 @@ const CONFIGURATIONS = [
         },
         endPosition: {
           x: 0,
-          y: 0,
+          y: -120,
           scale: HUMA_SCALE,
           zIndex: 20,
           orientation: 0,
         },
       },
       {
-        id: "top-left",
-        src: "robot_parts/left_arm.png",
-        alt: "Marcel left arm",
-        width: 229,
-        height: 639,
+        id: "left-arm",
+        src: "robot_parts/huma_arm_left.png",
+        alt: "Humanoid left arm",
+        width: 255,
+        height: 712,
         startPosition: {
           x: -278,
           y: 10,
@@ -64,11 +64,11 @@ const CONFIGURATIONS = [
         },
       },
       {
-        id: "top-right",
-        src: "robot_parts/right_arm.png",
-        alt: "Marcel right arm",
-        width: 205,
-        height: 710,
+        id: "right-arm",
+        src: "robot_parts/huma_arm_right.png",
+        alt: "Humanoid right arm",
+        width: 255,
+        height: 712,
         startPosition: {
           x: 270,
           y: -3,
@@ -85,11 +85,11 @@ const CONFIGURATIONS = [
         },
       },
       {
-        id: "bottom-left",
-        src: "robot_parts/left_leg.png",
-        alt: "Marcel left leg",
-        width: 198,
-        height: 996,
+        id: "left_leg",
+        src: "robot_parts/huma_leg_left.png",
+        alt: "Humanoid left leg",
+        width: 293,
+        height: 1538,
         startPosition: {
           x: -150,
           y: 350,
@@ -106,11 +106,11 @@ const CONFIGURATIONS = [
         },
       },
       {
-        id: "bottom-right",
-        src: "robot_parts/right_leg.png",
-        alt: "Marcel right leg",
-        width: 228,
-        height: 1001,
+        id: "right_leg",
+        src: "robot_parts/huma_leg_right.png",
+        alt: "Humanoid right leg",
+        width: 293,
+        height: 1538,
         startPosition: {
           x: 156,
           y: 350,
@@ -127,11 +127,11 @@ const CONFIGURATIONS = [
         },
       },
       {
-        id: "center-top",
-        src: "robot_parts/head.png",
+        id: "head",
+        src: "robot_parts/huma_head.png",
         alt: "Marcel head",
-        width: 215,
-        height: 236,
+        width: 349,
+        height: 350,
         startPosition: {
           x: 0,
           y: -80,
@@ -147,15 +147,57 @@ const CONFIGURATIONS = [
           orientation: 0,
         },
       },
+      {
+        id: "left_tool",
+        src: "robot_parts/hand_left.png",
+        alt: "Marcel head",
+        width: 199,
+        height: 490,
+        startPosition: {
+          x: 0,
+          y: -80,
+          scale: HUMA_SCALE,
+          zIndex: 35,
+          orientation: Math.random() * 60 - 60 / 2,
+        },
+        endPosition: {
+          x: 0,
+          y: -30,
+          scale: HUMA_SCALE,
+          zIndex: 35,
+          orientation: 0,
+        },
+      },
+      {
+        id: "right_tool",
+        src: "robot_parts/hand_right.png",
+        alt: "Marcel head",
+        width: 199,
+        height: 490,
+        startPosition: {
+          x: 0,
+          y: -80,
+          scale: HUMA_SCALE,
+          zIndex: 35,
+          orientation: Math.random() * 60 - 60 / 2,
+        },
+        endPosition: {
+          x: 0,
+          y: -30,
+          scale: HUMA_SCALE,
+          zIndex: 35,
+          orientation: 0,
+        },
+      },
     ],
   },
   {
     id: "dog_iso",
     IMAGE_SCALE: DOG_SCALE_ISO,
     IMAGE_START_POSITION: { x: 0, y: 0, orientation: 0 },
-    IMAGE_END_POSITION: { x: 0, y: 500, orientation: 0 },
+    IMAGE_END_POSITION: { x: 0, y: 600, orientation: 0 },
     ANIMATION_START: 20,
-    ANIMATION_END: 400,
+    ANIMATION_END: 500,
     IMAGES: [
       {
         id: "main",
@@ -398,7 +440,7 @@ export function HeroSection() {
       {/* Hero content */}
       <section
         ref={heroRef}
-        className="relative min-h-[130vh] flex items-center justify-center z-10"
+        className="relative h-[1400px] flex items-center justify-center z-10"
       >
         <div className="container mx-auto px-4 text-center relative">
           <div className="relative w-full max-w-3xl mx-auto">
