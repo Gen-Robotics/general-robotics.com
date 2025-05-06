@@ -21,7 +21,7 @@ export function Header() {
           <Button
             size="lg"
             variant="outline"
-            className="border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white"
+            className="border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white"
             onClick={() =>
               window.open(
                 "mailto:contact@general-robotics.com",

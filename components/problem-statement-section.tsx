@@ -44,7 +44,7 @@ export function ProblemStatementSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-20">
           <ProblemCard
-            icon={<CurrencyDollar className="w-12 h-12 text-emerald-600" />}
+            icon={<CurrencyDollar className="w-12 h-12 text-yellow-600" />}
             title="Expensive"
             value={isVisible ? 21 : 0}
             unit="trillion/year"
@@ -52,7 +52,7 @@ export function ProblemStatementSection() {
           />
 
           <ProblemCard
-            icon={<AlertTriangle className="w-12 h-12 text-emerald-600" />}
+            icon={<AlertTriangle className="w-12 h-12 text-yellow-600" />}
             title="Dangerous"
             value={isVisible ? 395 : 0}
             unit="million"
@@ -60,7 +60,7 @@ export function ProblemStatementSection() {
           />
 
           <ProblemCard
-            icon={<Users className="w-12 h-12 text-emerald-600" />}
+            icon={<Users className="w-12 h-12 text-yellow-600" />}
             title="Scarce"
             value={isVisible ? 50 : 0}
             unit="million"
@@ -114,8 +114,8 @@ function ProblemCard({
       <div className="flex justify-center mb-6">{icon}</div>
       <h3 className="text-2xl font-bold mb-4">{title}</h3>
       <div className="flex justify-center items-baseline mb-4">
-        <span className="text-4xl font-bold text-emerald-600">${count}</span>
-        <span className="text-2xl ml-1 text-emerald-600">{unit}</span>
+        <span className="text-4xl font-bold text-yellow-600">${count}</span>
+        <span className="text-2xl ml-1 text-yellow-600">{unit}</span>
       </div>
       <p className="text-gray-600">{description}</p>
     </div>
