@@ -36,7 +36,11 @@ export function ProblemStatementSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-20 z-20">
+    <section
+      ref={sectionRef}
+      data-section="problem"
+      className="relative pt-0 pb-20 z-20"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative z-20 text-white">
           Today, Physical Work Is:

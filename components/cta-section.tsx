@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
-    <section className="py-20 bg-yellow-600 text-white relative z-40">
+    <section className="py-20 bg-white text-yellow-600 relative z-40 border-t-4 border-yellow-600">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           Join us in revolutionizing the industrial workforce.
@@ -14,7 +14,7 @@ export function CTASection() {
           <Button
             size="lg"
             variant="outline"
-            className="border-white text-yellow-600 hover:bg-white/10"
+            className="border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white"
             onClick={() =>
               window.open(
                 "mailto:contact@general-robotics.com",
